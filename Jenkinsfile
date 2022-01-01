@@ -22,7 +22,7 @@ pipeline {
             
                 when{
                     expression{
-                        params.Unittestenv==true
+                        parameters.Unittestenv==true
                     }
                 }
             steps {
@@ -40,7 +40,7 @@ pipeline {
             steps {
                script {
                    echo "package the job"
-                   echo "chosen env version is ${params.chooseenvversion}"
+                   echo "chosen env version is ${parameters.chooseenvversion}"
                }
             }
         }
