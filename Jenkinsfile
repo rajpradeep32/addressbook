@@ -49,6 +49,7 @@ pipeline {
             
         stage('Package') {
       
+        
            /* input{
                 message "Select a pckg version"
                 ok "click version"
@@ -57,9 +58,8 @@ pipeline {
                 }
             }*/
 
-            
-            steps {
-                agent any
+             agent any
+            steps {             
                script {
                   // echo "package the job"
                    //echo "chosen env version is ${params.chooseenvversion}"
