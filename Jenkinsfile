@@ -1,8 +1,8 @@
 pipeline {
     agent any
     parameters{
-         string(name:'Test',defaultValue:'Testenv',description:'This is a test env');
-         booleanParam(name:'Unittestenv',defaultValue:true,description:'Need to run unittest only if its test env');
+         string(name:'Test',defaultvalue:'Testenv',description:'This is a test env');
+         booleanParam(name:'Unittestenv',defaultvalue:true,description:'Need to run unittest only if its test env');
          choice(name:'chooseenvversion',choices:['1.1','1.2','1.3']);
         
     }
@@ -22,7 +22,7 @@ pipeline {
             
                 when{
                     expression{
-                        parameters.Unittestenv==true
+                        params.Unittestenv==true
                     }
                 }
             steps {
@@ -40,7 +40,7 @@ pipeline {
             steps {
                script {
                    echo "package the job"
-                   echo "chosen env version is ${parameters.chooseenvversion}"
+                   echo "chosen env version is ${params.chooseenvversion}"
                }
             }
         }
