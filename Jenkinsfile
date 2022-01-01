@@ -19,12 +19,13 @@ pipeline {
             
 
         stage('UnitTest') {
-            steps {
+            
                 when{
                     expression{
-                        parameters.Unittestenv==true
+                        params.Unittestenv==true
                     }
                 }
+            steps {
                script {
                    
                    echo "test the job"
