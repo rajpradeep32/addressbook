@@ -41,7 +41,7 @@ pipeline {
             input{
                 message "Select a pckg version"
                 ok "click version"
-                choice(name:selectionpackageversion,choices:['1.1','1.2','1.3'])
+                choice(name:'selectionpackageversion',choices:['1.1','1.2','1.3']);
             }
 
             
