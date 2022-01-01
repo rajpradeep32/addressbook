@@ -37,6 +37,13 @@ pipeline {
             
             
         stage('Package') {
+      
+            input{
+                message "Select a pckg version"
+                ok "click version"
+            }
+
+            
             steps {
                script {
                    echo "package the job"
