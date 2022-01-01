@@ -24,15 +24,15 @@ pipeline {
                     expression{
                         parameters.Test==true
                     }
-               
+                }
                script {
                    
                    echo "test the job"
                }
-                }
-            }
-        }
- 
+            
+        } 
+      
+    }
             
             
         stage('Package') {
