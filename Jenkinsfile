@@ -2,7 +2,7 @@ pipeline {
     agent any
     parameters{
          string(name:'Test',defaultvalue:'Testenv',description:'This is a test env');
-         boolenparam(name:'Unittestenv';defaultvalue:true;description:'Need to run unittest only if its test env');
+         boolenParam(name:'Unittestenv';defaultvalue:true;description:'Need to run unittest only if its test env');
          choice(name:'choose a env version';choices:['1.1','1.2','1.3']);
         
     }
