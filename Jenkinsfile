@@ -3,7 +3,7 @@ pipeline {
     parameters{
          string(name:'Test',defaultValue:'Testenv',description:'This is a test env');
          booleanParam(name:'Unittestenv',defaultValue:true,description:'Need to run unittest only if its test env');
-         choice(name:'choose a env version',choices:['1.1','1.2','1.3']);
+         choice(name:'chooseenvversion',choices:['1.1','1.2','1.3']);
         
     }
     
@@ -40,7 +40,7 @@ pipeline {
             steps {
                script {
                    echo "package the job"
-                   echo "chosen env version is ${parameters.choose a env version}"
+                   echo "chosen env version is ${params.chooseenvversion}"
                }
             }
         }
