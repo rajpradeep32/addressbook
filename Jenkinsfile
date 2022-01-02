@@ -37,7 +37,7 @@ pipeline {
                 }*/
             steps {
                script {
-                   
+                  cd /tmp/workspace/pipeline1
                    //echo "test the job"
                    sh 'mvn test'
                }
