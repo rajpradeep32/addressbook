@@ -35,9 +35,9 @@ pipeline {
             steps {
                script {
                    
-                 sudo yum install maven -y
+                // sudo yum install maven -y
                   git 'https://github.com/rajpradeep32/addressbook.git'
-              cd /tmp/workspace/pipeline1
+            //  cd /tmp/workspace/pipeline1
                    sh 'mvn test'
                }
             
