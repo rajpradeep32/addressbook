@@ -64,7 +64,9 @@ pipeline {
                    //echo "chosen env version is ${params.chooseenvversion}"
                    
                    sshagent(['user2']) {
-                                           sh 'mvn package'
+                       sh "scp -o StrictHostKeyChecking=no serverscript.sh ec2-user@172.31.22.31:/home/ec2-user"
+                       sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.22.31 'bash ~/serverscript.sh'"
+                      
                         }
                    
                }
@@ -72,3 +74,4 @@ pipeline {
         }
     }
   }
+
