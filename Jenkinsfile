@@ -39,7 +39,7 @@ pipeline {
             steps {
                script {
                   git 'https://github.com/rajpradeep32/addressbook.git'
-                 // cd /tmp/workspace/pipeline1
+                  cd /tmp/workspace/pipeline1
                    //echo "test the job"
                    sh 'mvn test'
                }
