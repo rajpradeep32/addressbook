@@ -34,6 +34,8 @@ pipeline {
                
             steps {
                script {
+                   
+                 sudo yum install maven -y
                   git 'https://github.com/rajpradeep32/addressbook.git'
               
                    sh 'mvn test'
