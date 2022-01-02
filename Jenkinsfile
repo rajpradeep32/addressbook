@@ -7,10 +7,10 @@ pipeline {
         
     } */
 
-     tools{
+   /* tools{
         jdk 'myjava'
         maven 'mymaven'
-    }
+    }*/
 
     
     stages {
@@ -63,7 +63,11 @@ pipeline {
                script {
                   // echo "package the job"
                    //echo "chosen env version is ${params.chooseenvversion}"
-                   sh 'mvn package'
+                   
+                   sshagent(['user2']) {
+                                           sh 'mvn package'
+                        }
+                   
                }
             }
         }
