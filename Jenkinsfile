@@ -35,7 +35,7 @@ pipeline {
             steps {
                script {
                    
-                // sudo yum install maven -y
+                //sh sudo yum install maven -y
                   git 'https://github.com/rajpradeep32/addressbook.git'
             //  cd /tmp/workspace/pipeline1
                    sh 'mvn test'
@@ -64,8 +64,8 @@ pipeline {
                    //echo "chosen env version is ${params.chooseenvversion}"
                    
                    sshagent(['user2']) {
-                       sh "scp -o StrictHostKeyChecking=no serverscript.sh ec2-user@172.31.22.31:/home/ec2-user"
-                       sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.22.31 'bash ~/serverscript.sh'"
+                       sh "scp -o StrictHostKeyChecking=no serverscript.sh user2@172.31.22.31:/home/ec2-user"
+                       sh "ssh -o StrictHostKeyChecking=no user2@172.31.22.31 'bash ~/serverscript.sh'"
                       
                         }
                    
