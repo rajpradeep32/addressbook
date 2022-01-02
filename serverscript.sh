@@ -13,9 +13,9 @@ git pull origin master
 
 else
 
-{
+
     git clone https://github.com/rajpradeep32/addressbook.git
-}
+fi
 
 cd /home/ec2-user/addressbook
 mvn package
