@@ -19,6 +19,7 @@ pipeline {
             steps {
                script {
                    //echo "compile the job"
+                   git 'https://github.com/rajpradeep32/addressbook.git'
                    sh 'mvn compile'
                }
             }
@@ -37,7 +38,8 @@ pipeline {
                 }*/
             steps {
                script {
-                  cd /tmp/workspace/pipeline1
+                  git 'https://github.com/rajpradeep32/addressbook.git'
+                 // cd /tmp/workspace/pipeline1
                    //echo "test the job"
                    sh 'mvn test'
                }
