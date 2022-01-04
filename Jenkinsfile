@@ -25,7 +25,8 @@ pipeline {
                    //echo "compile the job"
                   // git 'https://github.com/rajpradeep32/addressbook.git'
                 sh 'cd /var/lib/jenkins/workspace/pipeline2'
-                git "pull origin master"
+               // git "pull origin master"
+                sh("git pull origin master")
                    sh 'mvn compile'
                }
             }
