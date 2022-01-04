@@ -1,3 +1,6 @@
+
+def origin = "https://github.com/rajpradeep32/addressbook.git"
+
 pipeline {
  
     agent none
@@ -7,8 +10,7 @@ pipeline {
          choice(name:'chooseenvversion',choices:['1.1','1.2','1.3']);
         
     } */
-       origin = 'https://github.com/rajpradeep32/addressbook.git'
-
+       
    /* tools{
         jdk 'myjava'
         maven 'mymaven'
@@ -22,7 +24,7 @@ pipeline {
                script {
                    //echo "compile the job"
                    git 'https://github.com/rajpradeep32/addressbook.git'
-                   git pull origin master
+                git "pull ${origin} master"
                    sh 'mvn compile'
                }
             }
