@@ -1,5 +1,5 @@
 pipeline {
-    origin = 'https://github.com/rajpradeep32/addressbook.git'
+ 
     agent none
    /*parameters{
          string(name:'Test',defaultValue:'Testenv',description:'This is a test env');
@@ -7,6 +7,7 @@ pipeline {
          choice(name:'chooseenvversion',choices:['1.1','1.2','1.3']);
         
     } */
+       origin = 'https://github.com/rajpradeep32/addressbook.git'
 
    /* tools{
         jdk 'myjava'
