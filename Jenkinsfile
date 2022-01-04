@@ -1,4 +1,5 @@
 pipeline {
+    origin = 'https://github.com/rajpradeep32/addressbook.git'
     agent none
    /*parameters{
          string(name:'Test',defaultValue:'Testenv',description:'This is a test env');
@@ -20,7 +21,7 @@ pipeline {
                script {
                    //echo "compile the job"
                    git 'https://github.com/rajpradeep32/addressbook.git'
-                   git 'pull https://github.com/rajpradeep32/addressbook.git master'
+                   git pull origin master
                    sh 'mvn compile'
                }
             }
