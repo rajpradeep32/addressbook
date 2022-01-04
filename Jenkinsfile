@@ -20,7 +20,7 @@ pipeline {
                script {
                    //echo "compile the job"
                    git 'https://github.com/rajpradeep32/addressbook.git'
-                   git 'pull origin master'
+                   git pull origin master
                    sh 'mvn compile'
                }
             }
