@@ -1,5 +1,5 @@
 
-def origin = "https://github.com/rajpradeep32/addressbook.git"
+//def origin = "https://github.com/rajpradeep32/addressbook.git"
 
 pipeline {
  
